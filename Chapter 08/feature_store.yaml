@@ -1,0 +1,3 @@
+project: Customer_Feature
+registry: gs://cust_feat_new/custfeat.db
+provider: gcp

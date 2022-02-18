@@ -1,0 +1,8 @@
+artifactsStore:
+  name: gcs-artifacts
+  kind: gcs
+  schema:
+    bucket: "gs://sb-plx-artifacts"
+  secret:
+    name: "gcs-secret"
+    mountPath: /plx-context/.gc

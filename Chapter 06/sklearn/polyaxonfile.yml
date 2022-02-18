@@ -1,0 +1,17 @@
+version: 1.1
+kind: component
+tags: [examples, scikit-learn]
+inputs:
+- {name: n_estimators, type: int, isOptional: true, value: 100}
+- {name: max_depth, type: int, isOptional: true, value: 5}
+
+run:
+  kind: job
+  container:
+    image: shabenga/polyaxon-examples
+    workingDir: "/code/sklearn"
+    command: ["python", "-u", "model.py"]
+    args: [
+      "--n_estimators={{ n_estimators }}",
+      "--max_depth={{ max_depth }}",
+    ]

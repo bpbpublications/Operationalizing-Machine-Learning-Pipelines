@@ -1,0 +1,10 @@
+apiVersion: "serving.kserve.io/v1beta1"
+kind: "InferenceService"
+metadata:
+  name: "<model_name>"
+spec:
+  predictor:
+    sklearn:
+      protocolVersion: "v2"
+      storageUri: "modelpath"
+      runtimeVersion: "0.5.3"
